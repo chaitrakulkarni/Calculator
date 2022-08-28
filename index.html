@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+  
+</head>
+<body>
+  
+  
+     <div class="container-md">
+        <div class="row ">
+            <div class="col-md-12">
+                <textarea name="" id="result"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <button value="1" id="1" onclick="func('1')">1</button>
+                <button value="2" id="2" onclick="func('2')">2</button>
+                <button value="3" id="3" onclick="func('3')">3</button>
+                <button value="/" id="/" onclick="func('/')">/</button>
+                <button value="=" id="=" onclick="solve()">=</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <button value="4" id="4" onclick="func('4')">4</button>
+                <button value="5" id="5" onclick="func('5')">5</button>
+                <button value="6" id="6" onclick="func('6')">6</button>
+                <button value="-" id="-" onclick="func('-')">-</button>
+                <button value="+" id="+" onclick="func('+')">+</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <button value="7" id="7" onclick="func('7')">7</button>
+                <button value="5" id="8" onclick="func('8')">8</button>
+                <button value="6" id="9" onclick="func('9')">9</button>
+                <button value="*" id="*" onclick="func('*')">*</button>
+                <button value="%" id="%" onclick="func('%')">%</button>
+               
+            </div>
+        </div>
+
+
+     </div>   
+    
+      <script>
+
+          function func(val)
+          {
+           document.getElementById("result").value+=val;   
+          }
+
+          function solve()
+          {
+              var x = document.getElementById("result").value
+              var y = eval(x)
+              document.getElementById("result").value=y
+          }
+
+         
+
+        //   $(document).ready(function(){
+        //       $("#1").click(function(){
+        //         var var1 =  $("#1").val();
+        //         document.getElementById("result").innerText=`${var1}`;
+        //         // $("#ans").text($var1);
+        //         // console.log($var1);
+        //       });
+        //   });
+      </script>
+
+    
+</body>
+</html>
